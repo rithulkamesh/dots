@@ -2,7 +2,7 @@ if status is-interactive
     set fish_greeting
     export LANG='en_US.UTF-8'
     export LC_ALL='en_US.UTF-8'
-    export EDITOR='/usr/local/bin/vim'
+    export EDITOR='/usr/bin/vim'
 
     zoxide init fish | source
     export MANPAGER=bat
