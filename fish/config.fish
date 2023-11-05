@@ -3,6 +3,7 @@ if status is-interactive
     export LANG='en_US.UTF-8'
     export LC_ALL='en_US.UTF-8'
     export EDITOR='/usr/bin/vim'
+    export ANDROID_HOME=$HOME/Android/Sdk
 
     zoxide init fish | source
     export MANPAGER=bat
@@ -14,7 +15,6 @@ if status is-interactive
     alias ll='eza -l --color=always --group-directories-first --icons'  # long format
     alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
     alias l='eza -lah --color=always --group-directories-first --icons' # tree listing
-    #alias npm="pnpm"
     alias python="python3"
     alias yay="paru"
 

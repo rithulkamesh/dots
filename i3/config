@@ -30,28 +30,21 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 bindsym $mod+p exec --no-startup-id sh ~/.config/rofi/scripts/power.sh
 
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# focus using arrow keys
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
+# split in different orientations
+bindsym $mod+Control+h split h
+bindsym $mod+Control+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -84,11 +77,14 @@ set $bl /home/rithulk/.config/scripts/backlight.sh
 bindsym XF86MonBrightnessUp exec --no-startup-id $bl --inc
 bindsym XF86MonBrightnessDown exec --no-startup-id $bl --dec
 
+# set monitor to correct resolution and arrangement
+exec "sh ~/.screenlayout/u2720q.sh"
+
 # get our OG wallpaper back
 exec "nitrogen --restore"
 
 # move workspaces between displays
-bindsym $mod+Ctrl+greater move workspace to output next
+bindsym $mod+Shift+greater move workspace to output next
 
 # set colors
 set $white #ffffff
@@ -142,10 +138,10 @@ bindsym $mod+Shift+r restart
 
 bindsym $mod+r mode "resize"
 mode "resize" {
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
