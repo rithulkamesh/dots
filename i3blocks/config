@@ -11,7 +11,7 @@ command=../scripts/battery.sh
 interval=10
 
 [date]
-command=date +%d/%m/%y\ %a
+command=date +%-d/%-m/%y\ %a
 interval=3600
 
 [time]

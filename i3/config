@@ -3,15 +3,16 @@
 #                    by rithulkamesh
 # =======================================
 # set a font that we can look at
-font pango:FiraCode Nerd Font 12
+font pango:FiraCode Nerd Font 13
 
 # set window gaps
-gaps inner 15
+gaps inner 10
 
 set $mod Mod4
 
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l
+exec --no-startup-id picom --experimental-backends --backend glx
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -150,6 +151,7 @@ mode "resize" {
 
 bar {
         status_command i3blocks
+        position top
         colors {
             background $bg
             statusline $yellow
@@ -161,7 +163,7 @@ bar {
 }
 
 # set i3 theme
-client.focused          $blue $blue $darkgray $purple $darkgray
+client.focused          $blue $blue $darkgray $darkgray $darkgray
 client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
 client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 client.urgent           $red $red $white $red $red

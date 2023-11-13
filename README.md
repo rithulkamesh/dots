@@ -4,6 +4,7 @@ Bits of other dotfiles combined with my own configuration for the perfect aesthe
 
 - OS: arch
 - Theme: gruvbox
+- Compositor: [picom](https://github.com/ibhagwan/picom)
 - DE: i3
 - Run Menu: rofi
 - Notifications: dunst

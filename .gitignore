@@ -20,6 +20,8 @@
 
 !/alacritty/
 !/alacritty/**/*
+!/picom/
+!/picom/**/*
 
 !wall.png
 !README.md

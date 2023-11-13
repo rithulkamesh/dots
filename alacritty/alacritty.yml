@@ -1,3 +1,8 @@
+font:
+  size: 8.0
+
+window:
+  opacity: 0.7
 # Implemented from https://github.com/alacritty/alacritty-theme
 # Colors (Gruvbox dark)
 colors:
