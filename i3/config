@@ -12,7 +12,6 @@ set $mod Mod4
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l
-exec --no-startup-id picom --experimental-backends --backend glx
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -28,7 +27,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start rofi
-bindsym $mod+d exec --no-startup-id "rofi -show drun"
+bindsym $mod+d exec --no-startup-id "~/.config/rofi/bin/launcher"
 bindsym $mod+p exec --no-startup-id sh ~/.config/rofi/scripts/power.sh
 
 # focus using arrow keys

@@ -25,4 +25,5 @@ if status is-interactive
       set -gx PATH "$PNPM_HOME" $PATH
     end
     # pnpm end
+    direnv hook fish | source
 end
