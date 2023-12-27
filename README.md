@@ -4,14 +4,14 @@ Bits of other dotfiles combined with my own configuration for the perfect aesthe
 
 - OS: arch
 - Theme: gruvbox
-- Compositor: [picom](https://github.com/ibhagwan/picom)
-- DE: i3
+- Compositor: hypr
+- DE: Hyprland
 - Run Menu: rofi
 - Notifications: dunst
 - Terminal: alacritty
 - Shell: fish
 - Editor: [neovim](https://github.com/rithulkamesh/nvim)
-- [Wallpaper](./wall.png)
+- [Wallpaper](./wall.jpg)
 
 ## Instructions for Installation
 

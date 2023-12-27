@@ -19,17 +19,16 @@
     separator_color = "#585858"
 
 [urgency_low]
-    background = "#181825"
-    foreground = "#a6adc8"
+    background = "#282828"
+    foreground = "#ebdbb2"
     timeout = 5
 
 [urgency_normal]
-    background = "#181825"
-    foreground = "#a6adc8"
+    background = "#282828"
+    foreground = "#ebdbb2"
     timeout = 20
 
 [urgency_critical]
-    background = "#181825"
-    foreground = "#a6adc8"
+    background = "#282828"
+    foreground = "#ebdbb2"
     timeout = 0
-
