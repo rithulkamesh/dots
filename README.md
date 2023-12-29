@@ -1,7 +1,5 @@
 # Dotfiles
 
-![screenshot](./dev/dev_1.png)
-
 Bits of other dotfiles combined with my own configuration for the perfect aesthetic.
 
 - OS: arch
@@ -14,6 +12,8 @@ Bits of other dotfiles combined with my own configuration for the perfect aesthe
 - Shell: fish
 - Editor: [neovim](https://github.com/rithulkamesh/nvim)
 - [Wallpaper](./wall.jpg)
+
+![screenshot](./images/dev_1.png)
 
 ## Instructions for Installation
 
