@@ -1,5 +1,7 @@
 # Dotfiles
 
+![screenshot](./dev/dev_1.png)
+
 Bits of other dotfiles combined with my own configuration for the perfect aesthetic.
 
 - OS: arch
