@@ -28,7 +28,6 @@ tooltip {
 #workspaces,
 #tray {
   background: @background;
-  border-radius: 8px;
   padding: 2px;
   margin-right: 4px;
 
@@ -41,7 +40,6 @@ tooltip {
 
 #workspaces button {
   padding: 0px;
-  border-radius: 50%;
   color: shade(@background, 0.8);
 }
 #workspaces button.urgent {
@@ -51,7 +49,6 @@ tooltip {
 #workspaces button.active {
   background: shade(alpha(@foreground, 0.2), 0.8);
   color: shade(@foreground, 0.9);
-  border-radius: 8px;
 }
 
 #cpu,
@@ -85,12 +82,10 @@ tooltip {
 #gamemode,
 #submap,
 #custom-recorder,
-#custom-vpn,
 #custom-github,
 #custom-updates,
 #bluetooth.connected {
   background: shade(alpha(@foreground, 0.1), 0.8);
-  border-radius: 8px;
 }
 
 #idle_inhibitor,
@@ -193,10 +188,9 @@ tooltip {
 
 #batteries {
   margin-right: 0px;
-  border-radius: 8px 0px 0px 8px;
+
 }
 #clock {
   margin-left: 0px;
-  border-radius: 0px 8px 8px 0px;
   background: alpha(@background, 0.6);
 }
