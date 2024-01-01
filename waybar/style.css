@@ -30,7 +30,6 @@ tooltip {
 #hardware,
 #scripts,
 #custom-weather,
-#batteries,
 #workspaces,
 #tray {
   background: @background;
@@ -61,15 +60,13 @@ tooltip {
 #cpu,
 #clock,
 #network,
-#custom-cputemp,
 #submap,
-#idle_inhibitor,
-#custom-updates,
 #bluetooth,
 #disk,
 #memory,
 #pulseaudio,
 #pulseaudio.mic,
+#battery,
 #backlight {
   padding: 0px 6px 0px 6px;
 }
