@@ -3,11 +3,11 @@
   "position": "top",
   "modules-left": [
     "group/batteries",
-    "clock",
-    "custom/weather",
     "hyprland/workspaces"
   ],
-  "modules-center": [],
+  "modules-center": [
+      "hyprland/window"
+  ],
   "modules-right": [
     "tray",
     "group/scroll",
@@ -34,20 +34,14 @@
     "orientation": "horizontal",
     "modules": [
       "battery",
-      "custom/batterysaver"
+      "clock"
     ]
   },
   "group/scripts": {
     "orientation": "horizontal",
     "modules": [
       "hyprland/submap",
-      "custom/colorpicker",
-      "idle_inhibitor",
-      "custom/camera",
-      "custom/notifications",
-      "custom/updates",
       "bluetooth",
-      "custom/recorder"
     ]
   },
   "group/hardware": {
@@ -136,14 +130,7 @@
     "format-full": "<span color='#00ff00'><b>{icon}</b></span> {capacity}%",
     "tooltip-format": "{timeTo}\n{capacity} % | {power} W"
   },
-  "custom/batterysaver": {
-    "format": " {}",
-    "exec": "~/.config/waybar/bin/battsaver-toggle getdata",
-    "on-click": "~/.config/waybar/bin/battsaver-toggle menu",
-    "interval": "once",
-    "return-type": "json",
-    "signal": 5
-  },
+
   "memory": {
     "format": "{}% "
   },
@@ -156,50 +143,9 @@
     "format": "{usage}% ",
     "on-click": "exec btop"
   },
-
-  "custom/colorpicker": {
-    "format": "{}",
-    "return-type": "json",
-    "interval": "once",
-    "exec": "$HOME/.config/waybar/bin/colpicker/colorpicker -j",
-    "on-click": "sleep 1 && $HOME/.config/waybar/bin/colpicker/colorpicker",
-    "signal": 1
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "tooltip-format-activated": "Idle Inhibitor is active",
-    "tooltip-format-deactivated": "Idle Inhibitor is not active",
-    "format-icons": {
-      "activated": " ",
-      "deactivated": " "
-    }
-  },
   "hyprland/submap": {
     "format": "{}",
     "tooltip": false
-  },
-  "custom/updates": {
-    "format": "{}",
-    "interval": 3600,
-    "exec": "~/.config/waybar/bin/updatecheck",
-    "return-type": "json",
-    "exec-if": "exit 0",
-    "signal": 8
-  },
-  "custom/camera": {
-    "format": "{} ",
-    "interval": "once",
-    "exec": "[ -z \"$(lsmod | grep uvcvideo)\" ] && echo \"\nCamera Disabled\" || echo \"\"",
-    "on-click": "~/.config/hypr/bin/camera-toggle",
-    "signal": 3
-  },
-  "custom/notifications": {
-    "format": "<b>{}</b> ",
-    "exec": "~/.config/waybar/bin/not-dnd -j",
-    "on-click": "~/.config/waybar/bin/not-dnd",
-    "return-type": "json",
-    "interval": "once",
-    "signal": 2
   },
   "clock": {
     "format": "{:%I:%M %p}",
