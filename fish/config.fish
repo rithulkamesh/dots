@@ -17,6 +17,7 @@ if status is-interactive
     alias l='eza -lah --color=always --group-directories-first --icons' # tree listing
     alias python="python3"
     alias yay="paru"
+    alias npm="pnpm"
 
     nvm use lts -s
     # pnpm
@@ -27,3 +28,7 @@ if status is-interactive
     # pnpm end
     direnv hook fish | source
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
