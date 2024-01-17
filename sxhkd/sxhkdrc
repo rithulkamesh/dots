@@ -25,7 +25,7 @@ XF86Audio{Raise,Lower}Volume
 XF86Audio{_,Mic}Mute
     sh ~/.config/scripts/volume.sh {--toggle,--toggle-mic}
 
-XF86Audio{Play,Stop,Prev,Next}XF86MonBrightnessUp
+XF86Audio{Play,Stop,Prev,Next}
     playerctl {play-pause,stop,previous,next}
 
 XF86MonBrightness{Up,Down}

@@ -6,24 +6,35 @@ if [[ $(xrandr -q | grep 'HDMI-1 connected') ]]; then
     xrandr --output eDP-1 --mode 1920x1200 --pos 3840x773 --rotate normal --output HDMI-1 --primary --mode 3840x2160 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off
 fi
 
-bspc monitor HDMI-1 -d I II III IV V
-bspc monitor eDP-1 -d VI VII VIII IX X
+bspc monitor HDMI-1 -d '1' '2' '3' '4' '5'
+bspc monitor eDP-1 -d '6' '7' '8' '9' '10'
 
 bspc config border_width         2
 bspc config window_gap          12
-
 bspc config split_ratio          0.52
+
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config paddingless_monocle true
+bspc config single_monocle false
+bspc config focus_follows_pointer true
 
-bspc rule -a firefox desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+# Remove all rules
+
+bspc rule -r *:*
+
+xsetroot -cursor_name left_ptr &
+bspc rule -a Firefox:Places state=floating follow=on focus=on
 
 # Start Applications automatically
 sxkhd &
 picom --config $HOME/.config/picom/picom.conf &
+exec betterlockscreen -u $HOME/.dots/wall.jpg &
+exec xss-lock  -- betterlockscreen -l &
+exec tlp --start &
+xfsettingsd&
 nitrogen --restore &
 dunst &
 polybar &
