@@ -16,7 +16,7 @@ timestr=%I:%M %p
 datestr=%a, %e/%m/%y
 
 # In my setup the current wallpaper (requires wallpaper scripts in /scripts)
-image=~/Pictures/wall.jpg
+image=~/Pictures/wall.png
 
 # Fade in time
 fade-in=0.5

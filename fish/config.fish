@@ -1,6 +1,7 @@
 if status is-interactive
     set fish_greeting
     export LANG='en_US.UTF-8'
+    export TERM="xterm-256color"
     export LC_ALL='en_US.UTF-8'
     export EDITOR='/usr/bin/vim'
     export ANDROID_HOME=$HOME/Android/Sdk
@@ -9,7 +10,6 @@ if status is-interactive
     export MANPAGER=bat
     starship init fish | source
 
-    alias cl="clear"
     alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
     alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
     alias ll='eza -l --color=always --group-directories-first --icons'  # long format
@@ -17,16 +17,22 @@ if status is-interactive
     alias l='eza -lah --color=always --group-directories-first --icons' # tree listing
     alias python="python3"
     alias yay="paru"
-    alias npm="pnpm"
+
+    alias notes="cd ~/notes && nvim -c 'Neorg workspace notes'"
+    alias docker="podman"
+    alias docker-compose="podman-compose"
 
     nvm use lts -s
+
     # pnpm
     set -gx PNPM_HOME "$HOME/Library/pnpm"
     if not string match -q -- $PNPM_HOME $PATH
       set -gx PATH "$PNPM_HOME" $PATH
     end
     # pnpm end
+
     direnv hook fish | source
+    source ~/.config/fish/conf.d/theme.fish
 end
 
 # bun

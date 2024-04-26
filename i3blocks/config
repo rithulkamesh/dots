@@ -1,0 +1,19 @@
+[brightness]
+command=echo "☀️: $(../scripts/backlight.sh)"
+interval=10
+
+[speakers]
+command=echo "🔊: $(../scripts/volume.sh)"
+interval=10
+
+[battery]
+command=../scripts/battery.sh
+interval=10
+
+[date]
+command=date +%d/%m/%y\ %a
+interval=3600
+
+[time]
+command=date +%I:%M:%S\ %p
+interval=1
