@@ -1,0 +1,119 @@
+@import "./colors.css";
+
+* {
+  background: transparent;
+  font-family: "FiraCode Nerd Font";
+  font-size: 12px;
+  color: @foreground;
+  margin: 0.5px 0px 0.5px 0.5px;
+}
+
+#waybar {
+  min-height: 20px;
+}
+
+#tray menu,
+tooltip {
+  background: @background;
+  color: @active;
+  border: 1px solid shade(@active, 0.6);
+}
+
+#window {
+    background: @background;
+    padding: 5px;
+    border: 1px solid #FBF1C7;
+    border-radius: 0.75em;
+}
+
+#scroll,
+#hardware,
+#scripts,
+#custom-weather,
+#workspaces,
+#tray {
+  background: @background;
+  padding: 2px;
+  margin-right: 4px;
+  border: 1px solid #FBF1C7;
+  border-radius: 0.75em;
+  /* border: 1px solid alpha(shade(@active, 0.6),0.6); */
+}
+
+#tray {
+  padding: 0px 8px 0px 8px;
+}
+
+#workspaces button {
+  padding: 0px;
+  color: shade(@background, 0.8);
+}
+#workspaces button.urgent {
+  text-decoration: underline;
+  font-weight: bold;
+}
+#workspaces button.active {
+  background: shade(alpha(@foreground, 0.2), 0.8);
+  color: shade(@foreground, 0.9);
+}
+
+#cpu,
+#clock,
+#network,
+#submap,
+#bluetooth,
+#disk,
+#memory,
+#pulseaudio,
+#pulseaudio.mic,
+#battery,
+#backlight {
+  padding: 0px 6px 0px 6px;
+}
+
+#submap,
+#bluetooth.connected {
+  background: shade(alpha(@foreground, 0.1), 0.8);
+}
+
+#custom-cputemp.cool {
+  color:#7AA2F7;
+}
+
+#custom-cputemp.warm {
+  color:#a6e3a1;
+}
+
+#custom-cputemp.warn {
+  color:#fab387;
+}
+
+#custom-cputemp.critical {
+  color:#d78787;
+}
+
+#network.disabled,
+#network.disconnected {
+  color: #d78787;
+}
+@keyframes blink {
+  to {
+    background-color: alpha(red, 0.6);
+    color: @foreground;
+  }
+}
+
+
+#battery.warning:not(.charging),
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#clock {
+  margin-left: 0px;
+  background: alpha(@background, 0.6);
+}
