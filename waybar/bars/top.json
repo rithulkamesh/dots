@@ -70,9 +70,9 @@
 
   "network": {
     "format-wifi": "  {bandwidthDownBits}",
-    "format-ethernet": " {bandwidthDownBits}",
-    "format-disconnected": "",
-    "format-linked": "",
+    "format-ethernet": "󰈀 {bandwidthDownBits}",
+    "format-disconnected": "",
+    "format-linked": "",
     "tooltip-format": "{ipaddr}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} \n {bandwidthDownBits}  {bandwidthUpBits} ",
     "tooltip-format-ethernet": "{ifname}  \n{ipaddr} | {frequency} MHz{icon} \n {bandwidthDownBits}  {bandwidthUpBits} ",
