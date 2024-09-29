@@ -1,12 +1,12 @@
 * {
-    BG:    #282828ff;
-    BGA:   #83a598ff;
-    FG:    #ebdbb2ff;
-    FGA:   #fb4934ff;
-    BDR:   #458588ff;
-    SEL:   #3c3836ff;
-    UGT:   #fb4934ff;
-    IMG:   #fabd2fff;
-    OFF:   #504945ff;
-    ON:    #b8bb26ff;
+    BG:    #1e1e2eff; /* base */
+    BGA:   #89b4faff; /* blue */
+    FG:    #cdd6f4ff; /* text */
+    FGA:   #f38ba8ff; /* red */
+    BDR:   #74c7ecff; /* sapphire */
+    SEL:   #313244ff; /* surface0 */
+    UGT:   #f38ba8ff; /* red */
+    IMG:   #fab387ff; /* peach */
+    OFF:   #45475aff; /* surface1 */
+    ON:    #a6e3a1ff; /* green */
 }
