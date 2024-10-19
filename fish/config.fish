@@ -4,7 +4,6 @@ if status is-interactive
     export TERM="xterm-256color"
     export LC_ALL='en_US.UTF-8'
     export EDITOR='/usr/bin/vim'
-    export ANDROID_HOME=$HOME/Android/Sdk
 
     zoxide init fish | source
     export MANPAGER=bat
@@ -17,11 +16,7 @@ if status is-interactive
     alias l='eza -lah --color=always --group-directories-first --icons' # tree listing
     alias python="python3"
     alias yay="paru"
-
-    alias notes="cd ~/notes && nvim -c 'Neorg workspace notes'"
-    alias docker="podman"
-    alias docker-compose="podman-compose"
-
+    alias todo="todoist-cli"
     nvm use lts -s
 
     # pnpm
