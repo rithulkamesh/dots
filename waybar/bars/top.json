@@ -9,9 +9,9 @@
       "hyprland/window"
   ],
   "modules-right": [
-    "tray",
+    "group/hardware",
     "group/scroll",
-    "group/hardware"
+    "tray",
   ],
   "hyprland/workspaces": {
     "format": "{icon}",

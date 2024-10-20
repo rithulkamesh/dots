@@ -22,7 +22,6 @@ tooltip {
 #window {
     background: @background;
     padding: 5px;
-    border: 1px solid #FBF1C7;
 }
 
 #scroll,
