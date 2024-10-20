@@ -8,16 +8,20 @@ if status is-interactive
     zoxide init fish | source
     export MANPAGER=bat
     starship init fish | source
+    nvm use lts -s
 
-    alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
-    alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
-    alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+    alias ls='eza -alh --color=always --group-directories-first --icons' # preferred listing
     alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
-    alias l='eza -lah --color=always --group-directories-first --icons' # tree listing
+
     alias python="python3"
     alias yay="paru"
     alias todo="todoist-cli"
-    nvm use lts -s
+
+    alias g="git"
+    alias ga="git add"
+    alias gp="git push"
+    alias gpl="git pull"
+    alias gcam="git commit -am"
 
     # pnpm
     set -gx PNPM_HOME "$HOME/Library/pnpm"
