@@ -3,13 +3,13 @@
   "position": "top",
   "modules-left": [
     "hyprland/workspaces",
-    "clock",
+    "group/hardware"
   ],
   "modules-center": [
       "hyprland/window"
   ],
   "modules-right": [
-    "group/hardware",
+    "clock",
     "group/scroll",
     "tray",
   ],
