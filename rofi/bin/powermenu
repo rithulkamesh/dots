@@ -90,7 +90,9 @@ case $chosen in
         fi
         ;;
     $lock)
-        betterlockscreen -l
+        mpc -q pause
+        amixer set Master mute
+        hyprlock
         ;;
     $suspend)
             mpc -q pause
@@ -100,7 +102,7 @@ case $chosen in
     $logout)
 		ans=$(rdialog &)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			bspc quit
+			pkill -u rithulk
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
 			exit
         else

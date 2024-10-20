@@ -1,7 +1,7 @@
 @import "./colors.css";
 
 * {
-  background: transparent;
+  background: @background;
   font-family: "FiraCode Nerd Font";
   font-size: 12px;
   color: @foreground;
@@ -9,7 +9,7 @@
 }
 
 #waybar {
-  min-height: 20px;
+  min-height: 14px;
 }
 
 #tray menu,
@@ -23,7 +23,6 @@ tooltip {
     background: @background;
     padding: 5px;
     border: 1px solid #FBF1C7;
-    border-radius: 0.75em;
 }
 
 #scroll,
@@ -35,9 +34,6 @@ tooltip {
   background: @background;
   padding: 2px;
   margin-right: 4px;
-  border: 1px solid #FBF1C7;
-  border-radius: 0.75em;
-  /* border: 1px solid alpha(shade(@active, 0.6),0.6); */
 }
 
 #tray {
@@ -53,8 +49,9 @@ tooltip {
   font-weight: bold;
 }
 #workspaces button.active {
-  background: shade(alpha(@foreground, 0.2), 0.8);
-  color: shade(@foreground, 0.9);
+  background: shade(alpha(@foreground, 1), 1);
+  color: shade(@foreground, 1);
+  border-radius: 0;
 }
 
 #cpu,
@@ -96,13 +93,13 @@ tooltip {
 #network.disconnected {
   color: #d78787;
 }
+
 @keyframes blink {
   to {
     background-color: alpha(red, 0.6);
     color: @foreground;
   }
 }
-
 
 #battery.warning:not(.charging),
 #battery.critical:not(.charging) {

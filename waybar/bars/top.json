@@ -24,7 +24,6 @@
   "group/scroll": {
     "orientation": "horizontal",
     "modules": [
-      "pulseaudio#mic",
       "pulseaudio",
       "backlight"
     ]
@@ -34,17 +33,7 @@
     "modules": [
       "battery",
       "network",
-      "memory",
-      "cpu",
     ]
-  },
-  "pulseaudio#mic": {
-    "format": "{format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
-    "on-click": "pactl set-source-mute 0 toggle",
-    "on-scroll-down": "pactl set-source-volume 0 -1%",
-    "on-scroll-up": "pactl set-source-volume 0 +1%"
   },
   "pulseaudio": {
     "format": "{volume}% {icon} ",
@@ -115,25 +104,8 @@
     "format-full": "<span color='#00ff00'><b>{icon}</b></span> {capacity}%",
     "tooltip-format": "{timeTo}\n{capacity} % | {power} W"
   },
-
-  "memory": {
-    "format": "{}% "
-  },
-  "disk": {
-    "interval": 600,
-    "format": "{percentage_used}% ",
-    "path": "/"
-  },
-  "cpu": {
-    "format": "{usage}% ",
-    "on-click": "exec btop"
-  },
-  "hyprland/submap": {
-    "format": "{}",
-    "tooltip": false
-  },
   "clock": {
-    "format": "{:%I:%M %p}",
+    "format": "{:%I:%M %p %d/%m/%y} ",
     "format-alt": "{:%A, %B %d, %Y (%R)}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
